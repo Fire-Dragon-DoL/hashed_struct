@@ -18,8 +18,20 @@ RSpec.describe HashedStruct do
     expect(described_class::VERSION).not_to be nil
   end
 
-  it "access to members set through initialize", focus: true do
-    expect(subject.name).to eq person_name
+  it { expect(subject.name).to eq person_name }
+  it { expect(subject.age).to eq person_age }
+  it { expect(subject.email).to eq person_email }
+
+  it "raises when trying to pass arguments in Struct#new fashion" do
+    expect{
+      person_class.new(person_name, person_age, person_email)
+    }.to raise_error
+  end
+
+  it "raises when trying to pass ONE argument in Struct#new fashion" do
+    klass = described_class.new(:message)
+
+    expect{klass.new(Faker::Lorem.word)}.to raise_error
   end
 
 end
