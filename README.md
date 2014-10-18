@@ -6,7 +6,7 @@ Struct with hash as initialization argument, to avoid dependency on positional a
 
 Add this line to your application's Gemfile:
 
-    gem 'hashed_struct', '~> 0.0.1'
+    gem 'hashed_struct', '~> 0.0.2'
 
 And then execute:
 
@@ -33,3 +33,7 @@ Person.new(name: 'Joe', age: 30, gender: 'Male')
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Special thanks
+- Hanmac (#ruby on freenode)
+- apeiros (#ruby on freenode)
