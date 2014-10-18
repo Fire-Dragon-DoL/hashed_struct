@@ -1,8 +1,7 @@
-require 'hashed_struct'
+require 'hashed_struct/version'
 
 # Can't inherit from Struct because it expect Binding as context (!)
 class HashedStruct
-  VERSION = "0.0.1"
 
   def initialize(*fields)
     Struct.new(*fields).tap do |klass|
