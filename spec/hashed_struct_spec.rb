@@ -18,7 +18,7 @@ RSpec.describe HashedStruct do
     expect(described_class::VERSION).not_to be nil
   end
 
-  it "access to members set through initialize" do
+  it "access to members set through initialize", focus: true do
     expect(subject.name).to eq person_name
   end
 
