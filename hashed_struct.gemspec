@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["francesco.belladonna@gmail.com"]
   spec.summary       = %q{Struct with hash as initialization argument}
   spec.description   = %q{Struct with hash as initialization argument, to avoid dependency on positional arguments}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Fire-Dragon-DoL/hashed_struct"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "faker"
+  spec.add_development_dependency "rspec", "~> 3.1.0"
 end

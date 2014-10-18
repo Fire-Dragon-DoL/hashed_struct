@@ -1,12 +1,12 @@
 # HashedStruct
 
-TODO: Write a gem description
+Struct with hash as initialization argument, to avoid dependency on positional arguments
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'hashed_struct'
+    gem 'hashed_struct', '~> 0.0.1'
 
 And then execute:
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use it like `Struct`, but when initializing the generated class, use a hash of
+arguments instead of positional arguments.
+
+```ruby
+Person = HashedStruct.new(:name, :age, :gender)
+Person.new(name: 'Joe', age: 30, gender: 'Male')
+```
 
 ## Contributing
 
